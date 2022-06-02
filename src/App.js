@@ -1,10 +1,16 @@
+import React from 'react';
 import './App.css';
+import Login from './Components/Login';
+import useLocalStorage from './Hooks/useLocalStorage';
 
 function App() {
+  const [id, setId] = useLocalStorage("id");
+
   return (
-    <div>
-      <h2>Hello world</h2>
-    </div>
+    <>
+      {id}
+      <Login setId={setId}></Login>
+    </>
   );
 }
 
