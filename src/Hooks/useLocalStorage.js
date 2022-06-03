@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 const PREFIX = "whatsapp-clone";
 
 export default function useLocalStorage(key, initialValue) {
-    const prefixedKey = PREFIX + "Key"
+    const prefixedKey = PREFIX + key;
 
 
     // get our value from localStorage and put it in our State
