@@ -16,21 +16,21 @@ export default function NewContactModal({ closeModal }) {
 
     return (
         <>
-            <Modal.Header closeButton>
-                <Modal.Body>
-                    <Form onSubmit={handleSubmit}>
-                        <Form.Group>
-                            <Form.Label>Id</Form.Label>
-                            <Form.Control type='text' ref={idRef} required></Form.Control>
-                        </Form.Group>
-                        <Form.Group>
-                            <Form.Label>Name</Form.Label>
-                            <Form.Control type='text' ref={nameRef} required></Form.Control>
-                        </Form.Group>
-                        <Button type='submit'>Create</Button>
-                    </Form>
-                </Modal.Body>
-            </Modal.Header>
+            <Modal.Header closeButton></Modal.Header>
+            <Modal.Body>
+                <Form onSubmit={handleSubmit}>
+                    <Form.Group>
+                        <Form.Label>Id</Form.Label>
+                        <Form.Control type='text' ref={idRef} required></Form.Control>
+                    </Form.Group>
+                    <Form.Group>
+                        <Form.Label>Name</Form.Label>
+                        <Form.Control type='text' ref={nameRef} required></Form.Control>
+                    </Form.Group>
+                    <Button type='submit'>Create</Button>
+                </Form>
+            </Modal.Body>
+
         </>
     )
 }

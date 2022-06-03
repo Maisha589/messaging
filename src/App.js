@@ -3,6 +3,7 @@ import './App.css';
 import Dashboard from './Components/Dashboard';
 import Login from './Components/Login';
 import { ContactsProvider } from './Contexts/ContactsProvider';
+import { ConversationsProvider } from './Contexts/ConversationProvider';
 import useLocalStorage from './Hooks/useLocalStorage';
 
 function App() {
@@ -10,7 +11,9 @@ function App() {
 
   const dashboard = (
     <ContactsProvider >
-      <Dashboard id={id}></Dashboard>
+      <ConversationsProvider>
+        <Dashboard id={id}></Dashboard>
+      </ConversationsProvider>
     </ContactsProvider>
   )
 
